@@ -1,0 +1,14 @@
+load("@rules_proto_grpc//python:defs.bzl", "python_proto_library")
+
+proto_library(
+    name="foo_proto",
+    srcs=["foo.proto"],
+    visibility=["//visibility:public"]
+)
+
+
+python_proto_library(
+    name = "foo_py_proto",
+    deps = [":foo_proto"],
+    visibility=["//visibility:public"]
+)

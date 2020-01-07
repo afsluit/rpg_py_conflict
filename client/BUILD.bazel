@@ -1,0 +1,9 @@
+py_binary(
+    name="client",
+    srcs=["client.py"],
+    deps=[
+        "//proto/bar:bar_py_proto",
+        "//proto/foo:foo_py_proto",
+        ]
+  
+    )

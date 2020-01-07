@@ -1,0 +1,8 @@
+syntax = "proto3";
+package example.bar;
+
+import "proto/foo/foo.proto";
+
+message B {
+  example.foo.A a = 1;
+}
